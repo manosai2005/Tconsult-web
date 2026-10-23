@@ -1,0 +1,399 @@
+
+/* =========================================
+   TCONSULT GLOBAL — CORPORATE FOOTER
+   Midnight Navy, Ivory & Champagne Gold
+========================================= */
+
+.tc-footer {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: #0b1830;
+  color: #f6f3ed;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tc-footer,
+.tc-footer * {
+  box-sizing: border-box;
+}
+
+.tc-footer-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Final call to action */
+
+.tc-footer-cta {
+  width: 100%;
+  margin: 0;
+  padding: 64px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background:
+    radial-gradient(
+      ellipse at 90% 50%,
+      rgba(44, 91, 133, 0.35),
+      transparent 45%
+    ),
+    linear-gradient(115deg, #101f39, #152b49);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.tc-footer-cta > div {
+  max-width: 760px;
+}
+
+.tc-footer-eyebrow {
+  display: block;
+  margin-bottom: 15px;
+  color: #dfc184;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  line-height: 1.6;
+}
+
+.tc-footer-cta h2 {
+  max-width: 760px;
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3.5vw, 48px);
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -0.8px;
+}
+
+.tc-footer-cta p {
+  max-width: 650px;
+  margin: 0;
+  color: #c7d0dc;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.tc-footer-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 52px;
+  padding: 0 22px;
+  flex-shrink: 0;
+  background: #dfc184;
+  border: 1px solid #dfc184;
+  color: #0b1830;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.tc-footer-cta-button:hover {
+  background: #f2dfb4;
+  transform: translateY(-2px);
+}
+
+/* Main footer columns */
+
+.tc-footer-main {
+  width: 100%;
+  padding: 58px 5% 48px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.tc-footer-brand {
+  min-width: 0;
+}
+
+.tc-footer-logo {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.tc-footer-logo span {
+  color: #dfc184;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.tc-footer-tagline {
+  margin: 0 0 22px;
+  color: #dfc184;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.tc-footer-description {
+  max-width: 300px;
+  margin: 0 0 22px;
+  color: #c2ccda;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.tc-footer-markets {
+  margin: 0;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.tc-footer-markets span {
+  padding: 0 5px;
+  color: #dfc184;
+}
+
+/* Footer navigation groups */
+
+.tc-footer-column {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.tc-footer-column h3 {
+  margin: 5px 0 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.tc-footer-column a {
+  display: inline-block;
+  max-width: 100%;
+  color: #c2ccda;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.tc-footer-column a:hover {
+  color: #dfc184;
+}
+
+/* Registered entity information */
+
+.tc-footer-entities {
+  width: 100%;
+  padding: 24px 5%;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: 16px;
+  row-gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.tc-footer-entities > span {
+  color: #dfc184;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tc-footer-entities p {
+  margin: 0;
+  color: #e2e7ef;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.tc-footer-entities small {
+  grid-column: 1 / -1;
+  margin-top: 5px;
+  color: #9eacbf;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* Copyright and legal navigation */
+
+.tc-footer-bottom {
+  width: 100%;
+  padding: 25px 5% 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.tc-footer-copyright {
+  margin: 0;
+  color: #aeb9c9;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.tc-footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 20px;
+}
+
+.tc-footer-legal a,
+.tc-footer-back-top {
+  color: #c2ccda;
+  font-size: 12px;
+  line-height: 1.8;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.tc-footer-legal a:hover,
+.tc-footer-back-top:hover {
+  color: #dfc184;
+}
+
+.tc-footer-back-top {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* =========================================
+   LAPTOP & TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .tc-footer-main {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 38px 28px;
+  }
+
+  .tc-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .tc-footer-description {
+    max-width: 500px;
+  }
+
+  .tc-footer-bottom {
+    flex-wrap: wrap;
+  }
+
+  .tc-footer-copyright {
+    flex-basis: 100%;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .tc-footer-cta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+    padding: 46px 24px;
+  }
+
+  .tc-footer-cta h2 {
+    font-size: 32px;
+  }
+
+  .tc-footer-cta p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .tc-footer-cta-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .tc-footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 22px;
+    padding: 42px 24px;
+  }
+
+  .tc-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .tc-footer-logo {
+    font-size: 31px;
+  }
+
+  .tc-footer-column h3 {
+    font-size: 15px;
+  }
+
+  .tc-footer-column a {
+    font-size: 12px;
+  }
+
+  .tc-footer-entities {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 7px;
+    padding: 25px 24px;
+  }
+
+  .tc-footer-entities p {
+    margin-bottom: 12px;
+  }
+
+  .tc-footer-entities small {
+    grid-column: auto;
+  }
+
+  .tc-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px;
+  }
+
+  .tc-footer-legal {
+    justify-content: flex-start;
+    gap: 8px 16px;
+  }
+}
+
+/* Accessibility */
+
+.tc-footer a:focus-visible {
+  outline: 2px solid #dfc184;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-footer-cta-button,
+  .tc-footer-column a,
+  .tc-footer-legal a,
+  .tc-footer-back-top {
+    transition: none;
+  }
+}

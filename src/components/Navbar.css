@@ -1,0 +1,747 @@
+
+/* =========================================================
+   TCONSULT GLOBAL — DARK GLOSSY PREMIUM NAVBAR
+   Layout: Logo LEFT | Navigation CENTER | CTA RIGHT
+   No top or bottom borders
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --tc-navy: #142044;
+  --tc-navy-deep: #081326;
+  --tc-navy-dark: #0a142c;
+  --tc-navy-light: #253c64;
+
+  --tc-gold: #a78343;
+  --tc-gold-light: #d3b878;
+  --tc-gold-bright: #f2dfb2;
+
+  --tc-white: #ffffff;
+  --tc-text-light: #f0f2f7;
+
+  --tc-font: 'Manrope', 'Segoe UI', Arial, sans-serif;
+}
+
+/* =========================================================
+   MAIN HEADER — DARK GLOSSY FINISH
+   ========================================================= */
+
+.tc-header,
+.tc-header * {
+  box-sizing: border-box;
+}
+
+.tc-header {
+  position: relative;
+  z-index: 1000;
+  isolation: isolate;
+  width: 100%;
+
+  color: var(--tc-white);
+  font-family: var(--tc-font);
+
+  /* Deep glossy midnight-navy finish */
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.095) 0%,
+      rgba(255, 255, 255, 0.025) 16%,
+      transparent 42%,
+      rgba(0, 0, 0, 0.19) 100%
+    ),
+    radial-gradient(
+      ellipse at 50% -120%,
+      rgba(80, 112, 165, 0.35) 0%,
+      transparent 72%
+    ),
+    linear-gradient(
+      112deg,
+      #17294a 0%,
+      #101f3b 28%,
+      #0b172e 58%,
+      #10213e 78%,
+      #081326 100%
+    );
+
+  /* No top or bottom borders */
+  border: none;
+  border-top: none;
+  border-bottom: none;
+
+  /* Soft depth instead of divider lines */
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.24),
+    0 1px 0 rgba(255, 255, 255, 0.035) inset;
+
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  backdrop-filter: blur(20px) saturate(150%);
+}
+
+/* Remove decorative border lines completely */
+
+.tc-header::before,
+.tc-header::after {
+  content: none;
+  display: none;
+}
+
+/* =========================================================
+   HEADER LAYOUT
+   Logo left, links centered, CTA right
+   ========================================================= */
+
+.tc-header-inner {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: 116px;
+  margin: 0;
+  padding: 0 clamp(32px, 4.2vw, 76px);
+
+  gap: 28px;
+}
+
+/* =========================================================
+   BRAND — LEFT SIDE
+   ========================================================= */
+
+.tc-brand {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+  flex: 0 0 230px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 7px;
+
+  color: var(--tc-white);
+  text-decoration: none;
+  border: none;
+  outline-offset: 5px;
+}
+
+.tc-brand-name {
+  font-family: var(--tc-font);
+  font-size: clamp(34px, 2.5vw, 41px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+  white-space: nowrap;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f2f3f6 50%,
+    #d9e1ef 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.22));
+}
+
+.tc-brand-mark {
+  margin-left: 3px;
+  font-family: var(--tc-font);
+  font-size: 13px;
+  font-weight: 700;
+  vertical-align: top;
+  letter-spacing: 0;
+
+  background: linear-gradient(
+    180deg,
+    #fff0c8,
+    #d3b878
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tc-brand-caption {
+  color: #dfc58d;
+  font-family: var(--tc-font);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   NAVIGATION — CENTERED ACROSS THE DESKTOP HEADER
+   Larger, clearer text
+   ========================================================= */
+
+.tc-navigation {
+  position: static;
+
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: flex-end;
+
+  min-width: 0;
+}
+
+/* Center the complete row independently of logo and CTA */
+
+.tc-navigation-links {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+
+  width: max-content;
+  max-width: calc(100% - 500px);
+
+  gap: clamp(20px, 1.75vw, 32px);
+}
+
+/* Increased navigation text size */
+
+.tc-nav-link {
+  position: relative;
+
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 60px;
+  padding: 0 0 2px;
+
+  color: #f0f2f7;
+  font-family: var(--tc-font);
+  font-size: clamp(16px, 1.13vw, 18px);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.25px;
+  text-decoration: none;
+  white-space: nowrap;
+
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.14);
+
+  transition:
+    color 220ms ease,
+    text-shadow 220ms ease;
+}
+
+/* Subtle champagne-gold hover underline */
+
+.tc-nav-link::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  left: 0;
+
+  height: 2px;
+  border-radius: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #a78343 0%,
+    #f2dfb2 50%,
+    #d3b878 100%
+  );
+
+  box-shadow: 0 0 10px rgba(211, 184, 120, 0.22);
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 230ms ease;
+}
+
+.tc-nav-link:hover,
+.tc-nav-link.is-active {
+  color: var(--tc-gold-bright);
+  text-shadow: 0 0 15px rgba(242, 223, 178, 0.18);
+}
+
+.tc-nav-link:hover::after,
+.tc-nav-link.is-active::after {
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   CTA — RIGHT SIDE
+   ========================================================= */
+
+.tc-header-cta {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+  overflow: hidden;
+
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 56px;
+  margin-left: auto;
+  padding: 0 23px;
+
+  color: #101b2c;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.48) 0%,
+      rgba(255, 255, 255, 0.08) 30%,
+      transparent 58%
+    ),
+    linear-gradient(
+      135deg,
+      #f4e4c1 0%,
+      #dfc184 48%,
+      #c5a15b 100%
+    );
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: var(--tc-font);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+
+  box-shadow:
+    0 7px 22px rgba(0, 0, 0, 0.22),
+    0 1px 0 rgba(255, 255, 255, 0.60) inset,
+    0 -1px 0 rgba(105, 76, 30, 0.12) inset;
+
+  transition:
+    background 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+/* Moving glossy reflection */
+
+.tc-header-cta::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -130%;
+
+  width: 65%;
+
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255, 255, 255, 0.60),
+    transparent
+  );
+
+  transform: skewX(-22deg);
+  transition: left 550ms ease;
+  pointer-events: none;
+}
+
+.tc-header-cta:hover {
+  color: #0b172b;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.60),
+      transparent 58%
+    ),
+    linear-gradient(
+      135deg,
+      #fff1d1 0%,
+      #ecd39d 48%,
+      #d8b875 100%
+    );
+
+  box-shadow:
+    0 10px 27px rgba(0, 0, 0, 0.25),
+    0 0 18px rgba(211, 184, 120, 0.14),
+    0 1px 0 rgba(255, 255, 255, 0.70) inset;
+
+  transform: translateY(-2px);
+}
+
+.tc-header-cta:hover::before {
+  left: 150%;
+}
+
+.tc-header-cta svg {
+  flex-shrink: 0;
+  transition: transform 220ms ease;
+}
+
+.tc-header-cta:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.tc-mobile-toggle {
+  display: none;
+  flex: 0 0 48px;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+
+  color: #f2dfb2;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.11),
+      rgba(255, 255, 255, 0.025)
+    ),
+    rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(211, 184, 120, 0.28);
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    0 1px 0 rgba(255, 255, 255, 0.07) inset;
+
+  transition:
+    background 200ms ease,
+    border-color 200ms ease;
+}
+
+.tc-mobile-toggle:hover {
+  background-color: rgba(211, 184, 120, 0.10);
+  border-color: rgba(211, 184, 120, 0.60);
+}
+
+/* Keyboard accessibility */
+
+.tc-brand:focus-visible,
+.tc-nav-link:focus-visible,
+.tc-header-cta:focus-visible,
+.tc-mobile-toggle:focus-visible {
+  outline: 2px solid var(--tc-gold-bright);
+  outline-offset: 5px;
+}
+
+/* =========================================================
+   LARGE DESKTOPS
+   ========================================================= */
+
+@media (min-width: 1600px) {
+  .tc-header-inner {
+    min-height: 122px;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .tc-brand {
+    flex-basis: 250px;
+  }
+
+  .tc-brand-name {
+    font-size: 42px;
+  }
+
+  .tc-navigation-links {
+    gap: clamp(25px, 1.8vw, 36px);
+    max-width: calc(100% - 540px);
+  }
+
+  .tc-nav-link {
+    font-size: 18px;
+  }
+
+  .tc-header-cta {
+    min-height: 58px;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   STANDARD LAPTOPS
+   ========================================================= */
+
+@media (min-width: 1101px) and (max-width: 1350px) {
+  .tc-header-inner {
+    min-height: 108px;
+    gap: 18px;
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .tc-brand {
+    flex-basis: 195px;
+  }
+
+  .tc-brand-name {
+    font-size: 32px;
+  }
+
+  .tc-brand-caption {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .tc-navigation-links {
+    gap: 15px;
+    max-width: calc(100% - 420px);
+  }
+
+  .tc-nav-link {
+    font-size: 15px;
+    letter-spacing: -0.35px;
+  }
+
+  .tc-header-cta {
+    min-height: 51px;
+    gap: 7px;
+    padding-right: 13px;
+    padding-left: 13px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   TABLETS — COLLAPSIBLE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .tc-header-inner {
+    min-height: 92px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 28px;
+  }
+
+  .tc-brand {
+    flex: 0 0 auto;
+  }
+
+  .tc-brand-name {
+    font-size: 33px;
+  }
+
+  .tc-brand-caption {
+    font-size: 8px;
+    letter-spacing: 1.1px;
+  }
+
+  .tc-mobile-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .tc-navigation {
+    position: static;
+
+    display: none;
+    flex: 0 0 100%;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 18px;
+
+    width: 100%;
+    min-width: 0;
+    padding: 8px 0 25px;
+  }
+
+  .tc-navigation.is-open {
+    display: flex;
+  }
+
+  .tc-navigation-links {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+
+    width: 100%;
+    max-width: none;
+  }
+
+  .tc-nav-link {
+    display: flex;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-height: 56px;
+    padding: 14px 8px;
+
+    color: #f0f2f7;
+    font-size: 17px;
+    font-weight: 700;
+    white-space: normal;
+
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .tc-nav-link::after {
+    display: none;
+  }
+
+  .tc-nav-link:hover,
+  .tc-nav-link.is-active {
+    padding-left: 14px;
+    color: var(--tc-gold-bright);
+
+    background: linear-gradient(
+      90deg,
+      rgba(211, 184, 120, 0.10),
+      transparent 75%
+    );
+  }
+
+  .tc-header-cta {
+    width: 100%;
+    min-height: 56px;
+    margin-left: 0;
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   SMALL TABLETS AND LARGE PHONES
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .tc-header-inner {
+    min-height: 86px;
+    padding-right: 23px;
+    padding-left: 23px;
+  }
+
+  .tc-brand-name {
+    font-size: 31px;
+  }
+
+  .tc-nav-link {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   MOBILE PHONES
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .tc-header-inner {
+    min-height: 80px;
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+
+  .tc-brand-name {
+    font-size: 29px;
+    letter-spacing: -1.2px;
+  }
+
+  .tc-brand-caption {
+    font-size: 7px;
+    letter-spacing: 0.9px;
+  }
+
+  .tc-mobile-toggle {
+    width: 45px;
+    height: 45px;
+    flex-basis: 45px;
+  }
+
+  .tc-navigation {
+    padding-top: 8px;
+    padding-bottom: 22px;
+  }
+
+  .tc-nav-link {
+    min-height: 52px;
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .tc-header-inner {
+    min-height: 76px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .tc-brand-name {
+    font-size: 26px;
+  }
+
+  .tc-brand-caption {
+    font-size: 6px;
+    letter-spacing: 0.75px;
+  }
+
+  .tc-mobile-toggle {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-nav-link,
+  .tc-nav-link::after,
+  .tc-header-cta,
+  .tc-header-cta::before,
+  .tc-header-cta svg,
+  .tc-mobile-toggle {
+    transition: none !important;
+  }
+}
+.tc-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* Keep all your existing background, typography,
+     shadows, and other styles unchanged */
+}

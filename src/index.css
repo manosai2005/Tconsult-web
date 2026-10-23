@@ -1,0 +1,312 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+/* ========================================
+   TCONSULT GLOBAL — DESIGN SYSTEM
+======================================== */
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --tc-font-heading: 'Manrope', sans-serif;
+  --tc-font-body: 'Inter', sans-serif;
+
+  --tc-navy: #0b1930;
+  --tc-navy-light: #132746;
+  --tc-gold: #d8bd83;
+  --tc-gold-hover: #e8d19e;
+  --tc-white: #ffffff;
+  --tc-ivory: #f8f7f3;
+  --tc-text: #202b3b;
+  --tc-muted: #687386;
+  --tc-border: #e4e7ec;
+
+  --tc-container: 1280px;
+}
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--tc-font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--tc-text);
+  background: var(--tc-white);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img,
+picture,
+video,
+svg {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+
+/* ========================================
+   CORPORATE TYPOGRAPHY
+======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: var(--tc-font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  color: inherit;
+}
+
+h1 {
+  font-size: clamp(42px, 5.2vw, 76px);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 700;
+  line-height: 1.16;
+}
+
+h3 {
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+small {
+  font-size: 13px;
+}
+
+/* ========================================
+   SHARED LAYOUT
+======================================== */
+
+.tc-container {
+  width: min(calc(100% - 64px), var(--tc-container));
+  margin-inline: auto;
+}
+
+.tc-section {
+  padding-block: 88px;
+}
+
+.tc-eyebrow {
+  margin-bottom: 16px;
+  font-family: var(--tc-font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.tc-section-title {
+  max-width: 850px;
+  margin-bottom: 20px;
+  font-family: var(--tc-font-heading);
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+}
+
+.tc-section-description {
+  max-width: 720px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--tc-muted);
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.tc-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 13px 22px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-family: var(--tc-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tc-button-primary {
+  color: var(--tc-navy);
+  background: var(--tc-gold);
+}
+
+.tc-button-primary:hover {
+  background: var(--tc-gold-hover);
+  transform: translateY(-1px);
+}
+
+.tc-button-secondary {
+  color: var(--tc-white);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.tc-button-secondary:hover {
+  color: var(--tc-navy);
+  background: var(--tc-white);
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--tc-gold);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--tc-navy);
+  background: var(--tc-gold);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .tc-container {
+    width: min(calc(100% - 40px), var(--tc-container));
+  }
+
+  .tc-section {
+    padding-block: 60px;
+  }
+
+  h1 {
+    font-size: clamp(36px, 9vw, 52px);
+    line-height: 1.1;
+  }
+
+  h2,
+  .tc-section-title {
+    font-size: clamp(28px, 7vw, 38px);
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .tc-section-description {
+    font-size: 16px;
+  }
+
+  .tc-button {
+    min-height: 46px;
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
