@@ -194,71 +194,55 @@ const partnershipTypes = [
 const testimonials = [
   {
     number: "01",
-    category: "Entrepreneurial impact",
+    category: "Entrepreneurial Impact",
     name: "Raghunath Rapeen (Raghu)",
     role: "Founder, KAARV",
-    location: "Entrepreneurship & global expansion",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=85",
-    initials: "RR",
+    image: "/images/testimonials/raghunath-rapeen.jpg",
     quote:
-      "Sundeep mentored me, refined my approach, strengthened my pitch, and introduced me to global ecosystems, governments, investors and business leaders.",
-    outcomeTitle: "Reported business outcome",
-    outcome:
-      "KAARV’s international journey culminated in a reported USD 4 million investment commitment. A commitment should not be described as cash received.",
-    source:
-      "Testimonial wording supplied in the TConsult company profile; confirm publication approval and supporting documentation.",
+      "Sundeep mentored me, refined my approach, strengthened my pitch, introduced me to global ecosystems, governments, investors, and business leaders.",
+    outcomeTitle: "KAARV’s international journey",
+    outcome: "Culminated in a reported US $4 million investment raised.",
+    source: "Company profile · Verify supporting documentation before publication",
+    sourceLabel: "Reported outcome",
   },
   {
     number: "02",
-    category: "Innovation & global expansion",
+    category: "Innovation & Global Expansion",
     name: "Madhu Samala",
     role: "HyRecruitAI / PrepVerse ecosystem",
-    location: "Indian AI startup ecosystem",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=85",
-    initials: "MS",
+    image: "/images/testimonials/madhu-samala.jpg",
     quote:
       "A heartfelt thank you to Mr. Sundeep Kumar Makthala for believing in our vision and pushing the boundaries of what’s possible for Indian AI startups on a global scale.",
-    outcomeTitle: "A wider horizon",
-    outcome:
-      "A perspective on mentorship, belief in innovation and the ambition to help Indian technology ventures explore international opportunities.",
-    source:
-      "Testimonial wording supplied in the TConsult company profile; confirm the exact quotation and permission before publication.",
+    outcomeTitle: "Publicly shared in connection with a TConsult partnership announcement",
+    outcome: "Source: LinkedIn",
+    source: "LinkedIn · Confirm the original post and permission before publication",
+    sourceLabel: "Source",
   },
   {
     number: "03",
-    category: "Ecosystem building",
+    category: "Ecosystem Building",
     name: "Ponnala Lakshmaiah",
     role: "Former IT Minister",
-    location: "Technology & international engagement",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=85",
-    initials: "PL",
+    image: "/images/testimonials/ponnala-lakshmaiah.jpg",
     quote:
       "Connecting talent with technology, technology with opportunity, and opportunity with international partnerships.",
-    outcomeTitle: "Ecosystem perspective",
-    outcome:
-      "The supplied profile associates these public remarks with Sundeep’s wider ecosystem-building work and WTITC’s international engagement.",
-    source:
-      "Verify the original public remarks and distinguish wider ecosystem recognition from a direct TConsult endorsement.",
+    outcomeTitle: "Public remarks recognising ecosystem building",
+    outcome: "Associated in the supplied reference with WTITC’s international engagement.",
+    source: "LinkedIn · Verify the original public remarks and attribution",
+    sourceLabel: "Source",
   },
   {
     number: "04",
-    category: "Leadership & global strategy",
-    name: "Sundeep Kumar Makthala",
-    role: "Chairman, TConsult Global",
-    location: "Cross-border business & innovation",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=85",
-    initials: "SK",
+    category: "Global Recognition",
+    name: "Carlos Slim",
+    role: "Telecommunications entrepreneur",
+    image: "/images/testimonials/carlos-slim.jpg",
     quote:
-      "Turn innovation and connections into opportunities with lasting impact.",
-    outcomeTitle: "The TConsult mission",
-    outcome:
-      "Build bridges between entrepreneurs, investors, institutions and markets through cross-border business development and ecosystem engagement.",
-    source:
-      "Editorial summary of the mission described in the supplied company profile; not a third-party testimonial.",
+      "Connecting businesses, technology and investment across borders is essential to creating new opportunities. TConsult’s global vision represents an approach to bringing people, ideas and international markets closer together.",
+    outcomeTitle: "Source shown in supplied reference",
+    outcome: "Republic TV",
+    source: "Republic TV · Verify the original segment and quotation before publication",
+    sourceLabel: "Source",
   },
 ];
 
@@ -530,7 +514,7 @@ function About() {
               <Sparkles size={19} />
               <span>CONNECTING MARKETS</span>
             </div>
-            <a className="tc-about-image-caption" href="/about/our-story">
+            <a className="tc-about-image-caption" href="/about">
               <span className="tc-caption-icon">
                 <ArrowUpRight size={23} />
               </span>
@@ -663,7 +647,7 @@ function Exchange() {
             We focus on practical connections and tailored pathways—not a
             one-directional market-entry model.
           </p>
-          <a className="tc-text-link" href="/global-network/model">
+          <a className="tc-text-link" href="/global-network">
             Explore Our Global Model <ArrowRight size={16} />
           </a>
         </Reveal>
@@ -768,7 +752,7 @@ function Regions() {
                 the direction of expansion.
               </p>
             </div>
-            <a href="/global-network/countries/india" aria-label="Explore India">
+            <a href="/global-network" aria-label="Explore India">
               <ArrowUpRight size={20} />
             </a>
           </div>
@@ -888,11 +872,9 @@ function Testimonials() {
 
   useEffect(() => {
     if (isPaused) return undefined;
-
     const timer = window.setTimeout(() => {
       setActiveIndex((current) => (current + 1) % testimonials.length);
-    }, 12000);
-
+    }, 9000);
     return () => window.clearTimeout(timer);
   }, [activeIndex, isPaused]);
 
@@ -901,129 +883,87 @@ function Testimonials() {
       <div className="tc-wide">
         <Reveal>
           <SectionHeading
-            eyebrow="Turning Innovation into Opportunity"
-            title={
-              <>
-                Inspiring Journeys. <span>Real Impact.</span>
-              </>
-            }
-            description="Perspectives on mentorship, innovation and the relationships that can help businesses explore global opportunities."
+            eyebrow="Voices of Impact"
+            title={<>Testimonials & <span>Global Recognition.</span></>}
+            description="Perspectives on mentorship, innovation, ecosystem building and cross-border opportunity."
           />
         </Reveal>
 
         <Reveal delay={100}>
           <div
-            className="tc-testimonial-wrap"
+            className="tc-testimonial-carousel"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
             onFocusCapture={() => setIsPaused(true)}
             onBlurCapture={(event) => {
-              if (!event.currentTarget.contains(event.relatedTarget)) {
-                setIsPaused(false);
-              }
+              if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
             }}
           >
-            <div className="tc-testimonial-showcase" key={active.number}>
-              <button
-                className="tc-carousel-arrow tc-carousel-prev"
-                onClick={() => goTo(activeIndex - 1)}
-                aria-label="Previous testimonial"
-                type="button"
-              >
-                <ChevronLeft size={21} />
-              </button>
-
-              <button
-                className="tc-carousel-arrow tc-carousel-next"
-                onClick={() => goTo(activeIndex + 1)}
-                aria-label="Next testimonial"
-                type="button"
-              >
-                <ChevronRight size={21} />
-              </button>
-
-              <div className="tc-testimonial-identity">
-                <div className="tc-testimonial-identity-top">
-                  <span>{active.number}</span>
-                  <span className="tc-identity-rule" />
-                  <span>VOICES OF IMPACT</span>
-                </div>
-
-                <div className="tc-testimonial-avatar">
-                  <img src={active.image} alt="" loading="lazy" />
-                  <span className="tc-avatar-orbit" />
-                </div>
-
-                <div className="tc-testimonial-category">{active.category}</div>
-                <h3>{active.name}</h3>
-                <p className="tc-testimonial-role">{active.role}</p>
-                <div className="tc-testimonial-location">
-                  <MapPin size={14} />
-                  {active.location}
-                </div>
+            <article className="tc-testimonial-slide" key={active.number} aria-live="polite">
+              <div className="tc-testimonial-slide-photo">
+                <img
+                  src={active.image}
+                  alt={`Portrait of ${active.name}`}
+                  onError={(event) => {
+                    event.currentTarget.style.display = "none";
+                    event.currentTarget.parentElement.classList.add("has-placeholder");
+                  }}
+                />
+                <span className="tc-testimonial-slide-initials" aria-hidden="true">
+                  {active.name.split(/\s+/).map((part) => part[0]).slice(0, 2).join("")}
+                </span>
+                <span className="tc-testimonial-photo-index">{active.number} / 04</span>
               </div>
 
-              <div className="tc-testimonial-content">
-                <span className="tc-testimonial-quote-icon">
-                  <Quote size={34} />
-                </span>
-                <span className="tc-testimonial-overline">
-                  A PERSPECTIVE ON GROWTH
-                </span>
-                <blockquote>“{active.quote}”</blockquote>
+              <div className="tc-testimonial-slide-content">
+                <div className="tc-testimonial-slide-category">
+                  <span className="tc-testimonial-gold-rule" />
+                  {active.category}
+                </div>
 
-                <div className="tc-testimonial-outcome">
-                  <span className="tc-outcome-icon">
-                    <Sparkles size={19} />
+                <div className="tc-testimonial-slide-person">
+                  <h3>{active.name}</h3>
+                  <p>{active.role}</p>
+                </div>
+
+                <div className="tc-testimonial-slide-quote-mark" aria-hidden="true">“</div>
+                <blockquote>{active.quote}</blockquote>
+
+                <div className="tc-testimonial-slide-source">
+                  <span className="tc-testimonial-source-icon" aria-hidden="true">
+                    <Quote size={22} />
                   </span>
                   <div>
                     <strong>{active.outcomeTitle}</strong>
                     <p>{active.outcome}</p>
+                    <small>{active.source}</small>
                   </div>
                 </div>
-
-                <div className="tc-testimonial-bottom">
-                  <span>{active.source}</span>
-                  <span className="tc-testimonial-mini-brand">
-                    TCONSULT<span>®</span>
-                  </span>
-                </div>
               </div>
+            </article>
 
-              <div className="tc-testimonial-progress" aria-hidden="true">
-                <span
-                  key={`${activeIndex}-${isPaused}`}
-                  className={isPaused ? "is-paused" : ""}
-                />
-              </div>
-            </div>
-
-            <div className="tc-carousel-controls">
-              <div className="tc-carousel-status">
+            <div className="tc-testimonial-carousel-controls">
+              <div className="tc-testimonial-counter">
                 <strong>{String(activeIndex + 1).padStart(2, "0")}</strong>
-                <span className="tc-carousel-status-line" />
-                <span>
-                  {String(testimonials.length).padStart(2, "0")} STORIES
-                </span>
-                <span className="tc-carousel-auto-label">
-                  {isPaused ? "PAUSED" : "AUTO-ADVANCE · 12 SEC"}
-                </span>
+                <span className="tc-testimonial-counter-line" />
+                <span>{String(testimonials.length).padStart(2, "0")} STORIES</span>
+                <span className="tc-testimonial-auto-label">{isPaused ? "PAUSED" : "AUTO-ADVANCE · 9 SEC"}</span>
               </div>
 
-              <div className="tc-carousel-dots" aria-label="Choose testimonial">
+              <div className="tc-testimonial-pagination" aria-label="Choose testimonial">
                 {testimonials.map((item, index) => (
                   <button
                     type="button"
                     key={item.number}
                     className={index === activeIndex ? "is-active" : ""}
                     onClick={() => goTo(index)}
-                    aria-label={`Show testimonial ${index + 1}`}
+                    aria-label={`Show testimonial ${index + 1}: ${item.name}`}
                     aria-current={index === activeIndex ? "true" : undefined}
                   />
                 ))}
               </div>
 
-              <div className="tc-carousel-actions">
+              <div className="tc-testimonial-carousel-actions">
                 <button
                   type="button"
                   onClick={() => setIsPaused((value) => !value)}
@@ -1032,19 +972,11 @@ function Testimonials() {
                 >
                   {isPaused ? <ArrowRight size={17} /> : <Layers3 size={17} />}
                 </button>
-                <button
-                  type="button"
-                  onClick={() => goTo(activeIndex - 1)}
-                  aria-label="Previous story"
-                >
-                  <ChevronLeft size={18} />
+                <button type="button" onClick={() => goTo(activeIndex - 1)} aria-label="Previous testimonial">
+                  <ChevronLeft size={19} />
                 </button>
-                <button
-                  type="button"
-                  onClick={() => goTo(activeIndex + 1)}
-                  aria-label="Next story"
-                >
-                  <ChevronRight size={18} />
+                <button type="button" onClick={() => goTo(activeIndex + 1)} aria-label="Next testimonial">
+                  <ChevronRight size={19} />
                 </button>
               </div>
             </div>
