@@ -14,7 +14,6 @@ import {
   TrendingUp,
   Target,
   Network,
-  BriefcaseBusiness,
   MapPinned,
   Search,
   ChartNoAxesCombined,
@@ -340,14 +339,6 @@ export default function Services() {
               className="services-hero-actions"
               variants={fadeUp}
             >
-              <Link
-                to="/contact"
-                className="services-button services-button--gold"
-              >
-                Explore a partnership
-                <ArrowUpRight size={18} />
-              </Link>
-
               <a
                 href="#services-capabilities"
                 className="services-hero-secondary"
@@ -683,15 +674,6 @@ export default function Services() {
               want to go next. Let’s explore the connections and pathways that
               may help you move forward.
             </motion.p>
-            <motion.div variants={fadeUp}>
-              <Link
-                to="/contact"
-                className="services-button services-button--gold"
-              >
-                Start a conversation
-                <ArrowUpRight size={18} />
-              </Link>
-            </motion.div>
           </motion.div>
 
           <motion.div

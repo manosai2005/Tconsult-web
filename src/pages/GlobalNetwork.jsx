@@ -518,11 +518,7 @@ export default function GlobalNetwork() {
               relevant commercial relationships.
             </motion.p>
 
-            <motion.div className="gn-intro-actions" variants={fadeUp}>
-              <Link to="/contact" className="gn-button gn-button--gold">
-                Explore a connection <ArrowUpRight size={17} />
-              </Link>
-
+            <motion.div className="gn-intro-actions gn-intro-actions--single" variants={fadeUp}>
               <a href="#gn-regions" className="gn-simple-link">
                 Explore our regions <ArrowRight size={16} />
               </a>
